@@ -1,0 +1,112 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f5f6fa;
+        transition: 0.3s;
+      }
+
+      body.dark {
+        background: #2d3436;
+        color: #dfe6e9;
+      }
+
+      .container {
+        width: 650px;
+        max-width: 95%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      body.dark .container {
+        background: #353b48;
+      }
+
+      h1 {
+        margin-bottom: 15px;
+      }
+
+      #text-display {
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 10px;
+        background: #f1f2f6;
+        min-height: 80px;
+        margin-bottom: 15px;
+      }
+
+      body.dark #text-display {
+        background: #2f3640;
+      }
+
+      #text-input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #dfe6e9;
+        border-radius: 8px;
+        margin-bottom: 15px;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 15px;
+      }
+
+      .stat-box {
+        background: #f1f2f6;
+        padding: 10px;
+        border-radius: 8px;
+        width: 30%;
+      }
+
+      body.dark .stat-box {
+        background: #2f3640;
+      }
+
+      button,
+      select {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 5px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      #start-btn {
+        background: #0984e3;
+        color: #fff;
+      }
+      #start-btn:hover {
+        background: #0652dd;
+      }
+      #theme-btn {
+        background: #636e72;
+        color: #fff;
+      }
+      #theme-btn:hover {
+        background: #2d3436;
+      }
+
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+        text-decoration: underline;
+      }
