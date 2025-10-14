@@ -1,6 +1,9 @@
 # Speed Typing Test Web Application
-https://rahulgarg10.github.io/Speed_Typing_Test_WebApp/
+Web Stack Used:
+- HTML
+- CSS
+- Javascript
 
-// Link definitions can be placed anywhere in the document
-[python-course]: https://www.codecademy.com/learn/learn-python-3 "Learn Python Basics"
-[python-advanced]: https://www.codecademy.com/learn/learn-intermediate-python-3 "Advanced Python Concepts"
+Please checkout the workinngs of webapp live at  https://rahulgarg10.github.io/Speed_Typing_Test_WebApp/
+
+
