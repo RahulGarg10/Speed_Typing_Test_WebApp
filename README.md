@@ -72,7 +72,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👤 Author
 
-*   **Rahul Garg** - [GitHub Profile](https://github.com)
+*   **Rahul Garg** - [GitHub Profile](https://github.com/RahulGarg10)
 
 
 
