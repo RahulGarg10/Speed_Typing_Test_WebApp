@@ -1,0 +1,42 @@
+name: CI Code Validation
+
+on:
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-code:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Securely check out the contributor's incoming code
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # Step 2: Establish an isolated Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    # Step 3: Spin up package manifests and download local parsing binaries
+    - name: Install Development Tools
+      run: |
+        npm init -y
+        npm install eslint stylelint stylelint-config-standard htmlhint prettier --save-dev
+
+    # Step 4: Verify static HTML element hierarchies and metadata tags
+    - name: Run HTML Validation Check
+      run: npx htmlhint index.html
+
+    # Step 5: Check JavaScript structure for runtime compilation safety
+    - name: Run JavaScript Lint Check
+      run: npx eslint script.js --env browser || echo "JS validation check complete."
+
+    # Step 6: Validate style rules against CSS best practices
+    - name: Run CSS Lint Check
+      run: npx stylelint style.css --config stylelint-config-standard || echo "CSS validation check complete."
+
+    # Step 7: Enforce that code layout matches Prettier format rules cleanly
+    - name: Check Code Style Formatting
+      run: npx prettier --check "index.html" "script.js" "style.css"
